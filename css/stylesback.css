@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+/* body {
+    background-color: #035074;
+    color: #FFFFFF;
+    font-family: arial,verdana,sans-serif;
+    font-size: 1rem;
+    padding: 10px; 
+  } */
+
+  body {
+    font-family: arial,helvetica,sans-serif;
+    color:#5d5d5d;
+    background-color:#ffffff;
+    padding: 0px;
+    margin:0px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    background-color: #61768C;
+    padding:20px;
+
+}
+
+.heading {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 3rem; 
+    color: #FFFFFF;   
+}
+
+/* -------------------------- nav */
+
+nav {
+    justify-self: end;
+    align-self: center;
+    border-right: 2px dotted #FFFFFF;
+}
+
+/* select {
+    font-family:arial,verdana,sans-serif;
+    font-size:1rem;
+    color:#035074;
+    border:2px solid #FFFFFF;
+    padding:2px 5px 2px 5px;
+    height:32px;
+    width:200px;
+    border-radius: 5px;
+    &:focus {
+      outline:none;
+    }
+  } */
+
+  figure {
+    float: right;
+    margin: 0px;
+    padding-bottom: 20px;
+    display: flexbox;
+    padding-right: 20px;
+}
+
+figcaption {
+    font-size:13px;
+    font-weight: 900;
+    color: #6f7276;
+    padding-top:3px;
+}
+
+nav a {
+    font-size:0.8rem;
+    color:#FFFFFF;
+    font-weight:bold;
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration:underline;
+}
+
+/* --------------- aside styling */
+
+aside {
+    grid-area: aside;
+    font-size: 0.75rem;
+    font-style: italic;
+    padding:15px;
+
+    /* & > div:last-child {
+        padding-top:5px;
+    } */
+}
+
+/* ------------------------------------ main */
+main {
+    grid-area: main;
+    padding:15px;
+
+    & img {
+        float: right;
+        margin-left:10px;
+        margin-bottom:10px;
+        border-radius: 3px;
+    }
+}
+
+/* ------------------------------------ footer */
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto;
+
+    background-color: #d3d3d3;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.1rem; 
+    padding: 20px;
+}
+
+.socials {
+    justify-self: end;
+    align-self: center;
+
+    padding: 20px;
+
+    & i {
+        margin-left:5px;
+    }
+}
